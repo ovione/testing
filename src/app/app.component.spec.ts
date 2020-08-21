@@ -36,19 +36,19 @@ describe('AppComponent', () => {
     fixture.detectChanges();
   });
 
-  xit('should create the app', () => {
+  it('should create the app', () => {
     expect(component).toBeTruthy();
   });
 
-  xit(`should have as title 'test'`, () => {
+  it(`should have as title 'test'`, () => {
     checkTitleComponent(component, 'test');
   });
 
-  xit('should render title', () => {
+  it('should render title', () => {
     checkTitleFrontEnd(nl, 'test');
   });
 
-  xit('should detect title', () => {
+  it('should detect title', () => {
     const originalTitle = 'test';
     const newTitle = 'title changed';
 
@@ -59,7 +59,7 @@ describe('AppComponent', () => {
     checkTitleFrontEnd(nl, newTitle);
   });
 
-  xit('should detect title with timeout', fakeAsync(() => {
+  it('should detect title with timeout', fakeAsync(() => {
     const originalTitle = 'test';
     const newTitle = 'title changed with timeout';
 
@@ -75,7 +75,7 @@ describe('AppComponent', () => {
     checkTitleFrontEnd(nl, newTitle);
   }));
 
-  xit('should detect title with async', fakeAsync(() => {
+  it('should detect title with async', fakeAsync(() => {
     const originalTitle = 'test';
     const newTitle = 'title changed with async';
 
