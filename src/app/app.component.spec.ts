@@ -89,9 +89,16 @@ describe('AppComponent', () => {
 
   it('should detect title with async and timeout', fakeAsync(() => {
     const originalTitle = 'test';
-    const newTitle = 'title changed with async';
+    const newTitle = 'title changed with async and timeout';
 
-    component.changeTitleWithAsynch(newTitle);
+    checkTitleComponent(component, originalTitle);
+    checkTitleFrontEnd(nl, originalTitle);
+
+    component.changeTitleWithTimeoutAndAsync(newTitle);
+    checkTitleComponent(component, originalTitle);
+    checkTitleFrontEnd(nl, originalTitle);
+
+    tick(100);
     checkTitleComponent(component, newTitle);
     checkTitleFrontEnd(nl, originalTitle);
 
