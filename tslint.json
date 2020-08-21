@@ -55,6 +55,7 @@
         ]
       }
     ],
+    "no-trailing-whitespace": false,
     "no-console": [
       true,
       "debug",
